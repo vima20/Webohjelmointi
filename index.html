@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ville Matilainen - portfolio</title>
+   <link rel="stylesheet" type="text/css" href="test.css">
+</head>
+<body>
+
+<!-- Display the current date and time -->
+<p id="currentDateTime"></p>
+<script>
+  function updateDateTime() {
+    const dateTimeElement = document.getElementById("currentDateTime");
+    const now = new Date();
+    const dateTimeString = now.toLocaleString();
+    dateTimeElement.textContent = "Nykyinen aika: " + dateTimeString;
+  }
+
+  setInterval(updateDateTime, 1000); // Update every second
+  updateDateTime(); // Update immediately on page load
+</script>
+    
+<h1>Minun portfolioni</h1>
+  
+<p>
+  Olen Ville Matilainen. 
+  Opiskelen Oulun ammattikorkeakoulussa ohjelmistokehitystä toista vuotta.
+  Olen suorittanut ylioppilastutkinnon vuonna 2020.
+  Armeijan suoritin samana vuonna Kainuun prikaatissa. 
+</p>
+
+<p>  
+  Opiskelin kevättalvella 2021 Aalto yliopiston avoimen yliopiston kaksi Java ja yhden Python kurssin, yhteensä 12 opintopistettä.
+  Nämä kurssit vahvistivat ammatinvalintaani.
+</p>
+
+<p>
+  Ammattikorkeakoulussa ensimmäisen vuosikurssin aiheina olivat mm.
+</p>
+
+<!-- Use an unordered list for the list items -->
+<ul>
+  <li>Matematiikan perusteet</li>
+  <li>Web ohjelmoinnin perusteet</li>
+  <li>Javan perusteet</li>
+  <li>Pilvipalvelut</li>
+</ul>
+
+<!-- Display text content without <textarea> -->
+<div>
+  <p>
+  Ensimmäisen syksyn projekti tehtiin Arduinoilla. Ryhmämme projektin aihe oli Speden pelit tyyppinen nopeus- ja muistipeli.
+  Minä tein led-valoihin ja painonappeihin perustuvan nopeuspelin osion.  
+  </p>
+  <p>
+    Viime keväänä teimme koulussa pankkiautomaattiprojektin. Projektissa oli kolme henkilöä.
+    Minun tehtäväni oli toteuttaa palveluun kirjautuminen käyttäjätunnuksen ja nelinumeroisen pin-koodin perusteella. 
+  </p>
+  <!-- Include a link to your GitHub repository -->
+  <p>Github linkki: <a href="https://github.com/vima20/tietokannat_k2023.git">https://github.com/vima20/tietokannat_k2023.git</a></p>
+  </p>
+  <p>
+  Tänä kesänä tein Android-kännykkäsovelluksen, jonka avulla golfari voi mitata avauslyönnin pituuden.
+  Avauksen pituuden lisäksi avauksen sijainti tallennetaan (vasen, oikea tai väylällä) golfarille tärkeiden statistiikoiden keräämiseksi.
+  Yksittäisen lyönnin mittauksen päätymisen yhteydessä pelaajalle esitetään kyseisen lyönnin pituuden lisäksi avausten pituuden keskiarvo, minimi- ja maksimipituudet.
+    Ensi jaksossa teemme websovelluksen jossa hyödynnetään reactia.
+  </p>
+</div>
+
+<!-- Create a table to display hobbies and their times -->
+<table style="width:100%">
+  <tr>
+    <th>Harrastukset</th>
+    <th>Käytetty aika viikossa</th>
+  </tr>
+  <tr>
+    <td>Golf</td>
+    <td>20h</td>
+  </tr>
+  <tr>
+    <td>Lukeminen</td>
+    <td>3h</td>
+  </tr>
+  <tr>
+    <td>Kuntosali</td>
+    <td>4h</td>
+  </tr>
+  <tr>
+    <td>Ulkoilu</td>
+    
+    <td>5h golfin lisäksi</td>
+  </tr>
+</table>
+
+<p>Tässä on taulukko, jossa listaan harrastuksia ja niihin käyttämääni aikaa.</p>
+
+<p> 
+  Koodauskielet, joita olen opiskellut, ovat Java, JavaScript, C ja C++. 
+  Olen myös vähän koodaillut Pythonilla. 
+  Osaan myös HTML, CSS ja JavaScriptiä. 
+  Haluaisin oppia myös muita teollisuudessa tai eri yrityksissä käytettäviä koodauskieliä.
+  Käytän aktiivisesti ChatGPT:tä, jota on hyvä käyttää ongelmanratkaisuun ja uuden oppimiseen. 
+</p>
+
+<h1>Harrastukset - JavaScript taulukossa</h1>
+
+<!-- Create an empty list for hobbies -->
+<ul id="harrastuksetList"></ul>
+
+<script>
+const harrastukset = ["Golf", "Lukeminen", "Ulkoilu", "Kuntosali"];
+const kesto = ["20h", "3h",  "5h golfin lisäksi","4h"];
+    
+  // Script to populate the list with hobbies and their times
+
+  function lisaaHarrastuksetListaan() {
+
+    let text = "";
+    for (let i = 0; i < harrastukset.length; i++) {
+    text += harrastukset[i] + " - " + kesto[i] + "<br>";
+    }
+
+    document.getElementById("harrastuksetList").innerHTML = text;
+  }
+
+  // Call the function to populate the list
+  lisaaHarrastuksetListaan();
+</script>
+  
+</body>
+</html>
