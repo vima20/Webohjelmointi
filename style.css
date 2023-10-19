@@ -1,0 +1,43 @@
+/* CSS styles */
+h1 {
+  font-family: Impact, Helvetica;
+  color: #FF0000; /* #FF0000 is for red */
+  text-align: center; 
+}
+
+.grid-container {
+  display: inline-grid;
+}
+
+/* Apply styles to all tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Style table headers */
+th {
+  background-color: #f2f2f2; /* Gray background color */
+  color: #333; /* Text color */
+  font-weight: bold; /* Bold font for headers */
+  padding: 10px; /* Padding around the content */
+  border: 1px solid #ddd; /* Border for table headers */
+  text-align: left; /* Align text to the left */
+}
+
+/* Style table rows */
+tr {
+  border: 1px solid #ddd; /* Border for table rows */
+}
+
+/* Style table data cells */
+td {
+  padding: 10px; /* Padding around the content */
+  border: 1px solid #ddd; /* Border for table cells */
+  text-align: left; /* Align text to the left */
+}
+
+/* Add a hover effect on rows (optional) */
+tr:hover {
+  background-color: #f5f5f5; /* Light gray background on hover */
+}
